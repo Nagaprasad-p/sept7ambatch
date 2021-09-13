@@ -9,6 +9,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="gitsept7ambatchFlow" doc:id="ae74a3b0-fa80-45b6-8720-b45da6b4257f" >
 		<http:listener doc:name="Listener" doc:id="55035e06-2421-4428-bb9f-c45bf68f8d9a" config-ref="HTTP_Listener_config" path="/git"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b5dbe1a1-cdf0-4544-ac3b-4564976a0f72" />
 		<set-payload value='#["success"]' doc:name="Set Payload" doc:id="b85d20a2-ceeb-4d61-9ffc-1446833d0599" />
+		<logger level="INFO" doc:name="Logger" doc:id="158345b8-339e-4fd3-9645-65013c273c5a" />
 	</flow>
 </mule>
